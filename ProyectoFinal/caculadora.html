@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+</head>
+<body>
+    <script src="./calculo.js"></script>
+    <form id="formulario">
+        <fieldset>
+            <legend>Calculadora</legend>
+            <label for="number">Ingrese su consumo mensual:</label>
+            <input type="number" id="consUsuaMensual"  required min="0" max="26.443" step="0.01">
+            <select id="Enriry" onchange="main()" required>
+                <option id="empty"></option>
+                <option id="colombia">Colombia</option>
+                <option id="china">China</option>
+            </select>
+            <select id="Year" onchange="main()" required>
+                <option id="empty"></option>
+                <option id="GB">Geo Biomass</option>
+                <option id="SG">Solar Generation</option>
+                <option id="WG">Wind Generation</option>
+                <option id="HG">Hydro Generation</option>
+            </select>
+            <select id="energy" onchange="main()" required>
+                <option id="empty"></option>
+                <option id="2019">2019</option>
+                <option id="2020">2020</option>
+                <option id="2021">2021</option>
+            </select>
+            <div id="numeros">
+                <button type="button" id="enviar">Consumo</button>
+            </div>
+            <p id="resultado"></p>
+        </fieldset>
+    </form>
+</body>
+</html>

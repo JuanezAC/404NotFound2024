@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grafica de Linea</title>
+</head>
+<body>
+    <div class="container">
+        <select id="Enriry" onchange="barras()">
+            <option id="empty"></option>
+            <option id="colombia">Colombia</option>
+            <option id="china">China</option>
+            <option id="africa">Africa</option>
+        </select>
+        <button id="enviar">enviar</button>
+        <div class="chart" style= "width:400px">
+            <canvas id="graph"></canvas>
+        </div>
+        <div>
+
+        </div>
+    </div>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.8.0/chart.min.js"></script>
+    <script src="./GraficaL.js"></script>
+</body>
+</html>

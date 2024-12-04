@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabla dinamica desde CSV</title>
+    
+    <style>
+        table {
+            border-collapse: collapse;
+            margin: 20px 0 0 10px;
+            overflow-y: scroll;
+            display: block;
+            height: 300px;
+            border: 1px grey solid;
+            max-width: 55rem;
+        }
+        th, td{
+            border: 1px solid grey;
+            padding: 8px;
+            text-align: left;
+        }
+        th{
+            background-color: #f4f4f4;
+            border: 2px solid grey;
+            position: sticky;
+            top: 0;
+            border: 2px solid grey;
+        }
+        #tablaUsuarios {
+            width: 100%;
+            height: 300px; /* Set the desired height for the tbody */
+        }
+        #encabezados{
+            position: sticky;
+            top: 0;
+            border: 2px solid grey;
+        }
+    </style>
+</head>
+<body>
+    <h1>Tabla de Usuarios Version 1</h1>
+    <select id="Enriry" onchange="main()">
+        <option id="empty"></option>
+        <option id="colombia">Colombia</option>
+        <option id="china">China</option>
+        <option id="todos">todos</option>
+    </select>
+    <select id="Year" onchange="main()">
+        <option id="empty"></option>
+        <option id="2019">2019</option>
+        <option id="2020">2020</option>
+        <option id="2021">2021</option>
+        <option id="todosAños">Todos</option>
+    </select>
+    <table class="tabla">
+    <thead id="encabezados">
+        <tr>
+            <th>Entity</th>
+            <th>Code</th>
+            <th>Year</th>
+            <th>Geo Biomass Other - TWh</th>
+            <th>Solar Generation - TWh</th>
+            <th>Wind Generation - TWh</th>
+            <th>Hydro Generation - TWh</th>
+        </tr>
+        </thead>
+            <tbody id="tablaUsuarios">
+            </tbody>
+    </table>
+    <script src="./listas.js"></script>
+</body>
+</html>
